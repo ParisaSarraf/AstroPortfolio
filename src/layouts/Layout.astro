@@ -1,0 +1,22 @@
+---
+import Navbar from "../components/navbar.astro";
+import Footer from "../components/Footer.astro";
+import MainHead from "./MainHead.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <MainHead />
+  <body class="bg-slate-900 text-white grid gap-0">
+    <Navbar />
+    <slot />
+    <style>
+      body {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+    <Footer />
+  </body>
+</html>

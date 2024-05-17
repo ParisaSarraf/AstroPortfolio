@@ -1,0 +1,53 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { projects: "bantr" },
+      props: {
+        name: "img 1",
+        desc: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      },
+    },
+    {
+      params: { projects: "introz" },
+      props: {
+        name: "img 2",
+        desc: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      },
+    },
+    {
+      params: { projects: "twit" },
+      props: {
+        name: "img 3",
+        desc: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      },
+    },
+    {
+      params: { projects: "fourth" },
+      props: {
+        name: "img 4",
+        desc: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+      },
+    },
+  ];
+}
+const { projects } = Astro.params;
+const { name, desc } = Astro.props;
+---
+
+<Layout title="Parisa">
+  <section class="mx-auto w-3/6">
+    <img
+      src=`/images/${projects}.png`
+      width="600"
+      height="600"
+      class="rounded"
+    />
+    <h1 class="font-bold mt-4">Project {name}</h1>
+    <p>{desc}</p>
+    <section></section>
+  </section></Layout
+>

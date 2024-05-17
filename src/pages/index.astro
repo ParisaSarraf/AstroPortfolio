@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+const name = "parisa";
+---
+
+<Layout title="parisa">
+
+
+   <div class="w-8/12 md:w-6/12 mx-auto">
+    <h1
+      class="text-5xl md:text-6xl text-center drop-shadow-[0px_35px_35px_rgba(39,245,131,0.6)]"
+    >
+      Hey 👋, I am Parisa saraf
+    </h1>
+    <div id="typed-strings">
+      <p>I am a <strong>Software Engineer</strong></p>
+      <p>I <em>work</em> with Astro, React, JavaScript,  TailWindcss ,Html, Css</p>
+    </div>
+
+    <div class="text-center mt-6"><span id="typed"></span></div>
+  </div>
+ 
+</Layout>
+
+
+
+
+<script>
+  import Typed from "typed.js";
+  var typed = new Typed("#typed", {
+    stringsElement: "#typed-strings",
+    typeSpeed: 50,
+    loop: true,
+  });
+</script>
